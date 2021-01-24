@@ -15,18 +15,18 @@ if ps x | grep "bot_plus"|grep -v grep 1>/dev/null 2>/dev/null; then
     screen -wipe > /dev/null 2>&1
 fi
 if [[ -e /etc/squid3/squid.conf ]]; then
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/squid1.txt -O /tmp/sqd1 1>/dev/null 2>/dev/null
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/squid1.txt -O /tmp/sqd1 1>/dev/null 2>/dev/null
 echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/squid2.txt -O /tmp/sqd3 1>/dev/null 2>/dev/null
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/squid2.txt -O /tmp/sqd3 1>/dev/null 2>/dev/null
 cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid3/squid.conf
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/payload.txt -O /etc/squid3/payload.txt 1>/dev/null 2>/dev/null
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/payload.txt -O /etc/squid3/payload.txt 1>/dev/null 2>/dev/null
 echo " " >> /etc/squid3/payload.txt
 elif [[ -e /etc/squid/squid.conf ]]; then
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/squid1.txt -O /tmp/sqd1 1>/dev/null 2>/dev/null
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/squid1.txt -O /tmp/sqd1 1>/dev/null 2>/dev/null
 echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/squid.txt -O /tmp/sqd3 1>/dev/null 2>/dev/null
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/squid.txt -O /tmp/sqd3 1>/dev/null 2>/dev/null
 cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid/squid.conf
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/payload.txt -O /etc/squid/payload.txt 1>/dev/null 2>/dev/null
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/payload.txt -O /etc/squid/payload.txt 1>/dev/null 2>/dev/null
 echo " " >> /etc/squid/payload.txt
 fi
 fun_sqdconf () {
@@ -80,77 +80,77 @@ netstat -nplt| grep -w 'apache2' |grep -w '80' && apt remove apache2 -y
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/addhost.sh -O /bin/addhost > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/addhost.sh -O /bin/addhost > /dev/null 2>&1
 chmod +x /bin/addhost
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/verifatt.sh -O /bin/verifatt > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/verifatt.sh -O /bin/verifatt > /dev/null 2>&1
 chmod +x /bin/verifatt
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/verifbot.sh -O /bin/verifbot > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/verifbot.sh -O /bin/verifbot > /dev/null 2>&1
 chmod +x /bin/verifbot
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/alterarsenha.sh -O /bin/alterarsenha > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/alterarsenha.sh -O /bin/alterarsenha > /dev/null 2>&1
 chmod +x /bin/alterarsenha
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/criarusuario.sh -O /bin/criarusuario > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/criarusuario.sh -O /bin/criarusuario > /dev/null 2>&1
 chmod +x /bin/criarusuario
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/delhost.sh -O /bin/delhost > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/delhost.sh -O /bin/delhost > /dev/null 2>&1
 chmod +x /bin/delhost
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/expcleaner.sh -O /bin/expcleaner > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/expcleaner.sh -O /bin/expcleaner > /dev/null 2>&1
 chmod +x /bin/expcleaner
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/mudardata.sh -O /bin/mudardata > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/mudardata.sh -O /bin/mudardata > /dev/null 2>&1
 chmod +x /bin/mudardata
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/criarteste.sh -O /bin/criarteste > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/criarteste.sh -O /bin/criarteste > /dev/null 2>&1
 chmod +x /bin/criarteste
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/remover.sh -O /bin/remover > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/remover.sh -O /bin/remover > /dev/null 2>&1
 chmod +x /bin/remover
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/alterarlimite.sh -O /bin/alterarlimite > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/alterarlimite.sh -O /bin/alterarlimite > /dev/null 2>&1
 chmod +x /bin/alterarlimite
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/ajuda.sh -O /bin/ajuda > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/ajuda.sh -O /bin/ajuda > /dev/null 2>&1
 chmod +x /bin/ajuda
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/sshmonitor.sh -O /bin/sshmonitor > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/sshmonitor.sh -O /bin/sshmonitor > /dev/null 2>&1
 chmod +x /bin/sshmonitor
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/badvpn.sh -O /bin/badvpn > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/badvpn.sh -O /bin/badvpn > /dev/null 2>&1
 chmod +x /bin/badvpn
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/userbackup.sh -O /bin/userbackup > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/userbackup.sh -O /bin/userbackup > /dev/null 2>&1
 chmod +x /bin/userbackup
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/blockt.sh -O /bin/blockt > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/blockt.sh -O /bin/blockt > /dev/null 2>&1
 chmod +x /bin/blockt
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/otimizar.sh -O /bin/otimizar > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/otimizar.sh -O /bin/otimizar > /dev/null 2>&1
 chmod +x /bin/otimizar
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/menu.sh -O /bin/menu > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/menu.sh -O /bin/menu > /dev/null 2>&1
 chmod +x /bin/menu
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/speedtest.sh -O /bin/speedtest > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/speedtest.sh -O /bin/speedtest > /dev/null 2>&1
 chmod +x /bin/speedtest
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/banner.sh -O /bin/banner > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/banner.sh -O /bin/banner > /dev/null 2>&1
 chmod +x /bin/banner
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/senharoot.sh -O /bin/senharoot > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/senharoot.sh -O /bin/senharoot > /dev/null 2>&1
 chmod +x /bin/senharoot
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/reiniciarservicos.sh -O /bin/reiniciarservicos > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/reiniciarservicos.sh -O /bin/reiniciarservicos > /dev/null 2>&1
 chmod +x /bin/reiniciarservicos
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/reiniciarsistema.sh -O /bin/reiniciarsistema > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/reiniciarsistema.sh -O /bin/reiniciarsistema > /dev/null 2>&1
 chmod +x /bin/reiniciarsistema
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/attscript.sh -O /bin/attscript > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/attscript.sh -O /bin/attscript > /dev/null 2>&1
 chmod +x /bin/attscript
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/conexao.sh -O /bin/conexao > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/conexao.sh -O /bin/conexao > /dev/null 2>&1
 chmod +x /bin/conexao
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/detalhes.sh -O /bin/detalhes > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/detalhes.sh -O /bin/detalhes > /dev/null 2>&1
 chmod +x /bin/detalhes
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/droplimiter.sh -O /bin/droplimiter > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/droplimiter.sh -O /bin/droplimiter > /dev/null 2>&1
 chmod +x /bin/droplimiter
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/delscript.sh -O /bin/delscript > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/delscript.sh -O /bin/delscript > /dev/null 2>&1
 chmod +x /bin/delscript
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/botssh.sh -O /bin/botssh > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/botssh.sh -O /bin/botssh > /dev/null 2>&1
 chmod +x /bin/botssh
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/infousers.sh -O /bin/infousers > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/infousers.sh -O /bin/infousers > /dev/null 2>&1
 chmod +x /bin/infousers
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/limiter.sh -O /bin/limiter > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/limiter.sh -O /bin/limiter > /dev/null 2>&1
 chmod +x /bin/limiter
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/uexpired.sh -O /bin/uexpired > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/uexpired.sh -O /bin/uexpired > /dev/null 2>&1
 chmod +x /bin/uexpired
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/cabecalho -O /etc/SSHPlus/cabecalho > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/cabecalho -O /etc/SSHPlus/cabecalho > /dev/null 2>&1
 chmod +x /etc/SSHPlus/cabecalho
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/bot -O /etc/SSHPlus/bot > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/bot -O /etc/SSHPlus/bot > /dev/null 2>&1
 chmod +x /etc/SSHPlus/bot
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/proxy.py -O /etc/SSHPlus/proxy.py > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/proxy.py -O /etc/SSHPlus/proxy.py > /dev/null 2>&1
 chmod +x /etc/SSHPlus/proxy.py
-wget https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/sshplus -O /usr/lib/sshplus > /dev/null 2>&1
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/sshplus -O /usr/lib/sshplus > /dev/null 2>&1
 chmod +x /usr/lib/sshplus
 [[ ! -d /etc/bot ]] && mkdir /etc/bot
 [[ ! -d /etc/bot/info-users ]] && mkdir /etc/bot/info-users
@@ -173,7 +173,7 @@ for host in ${_host[@]}; do
 done
 
 service ssh restart
-wget -qO- https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/confirme.py > /home/confirme.py 1>/dev/null 2>&1
+wget -qO- https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/confirme.py > /home/confirme.py 1>/dev/null 2>&1
 python /home/confirme.py "$name" "$ipdovps" 1>/dev/null 2>&1
 rm -rf /home/confirme.py 1>/dev/null 2>&1
 [[ ! -e /etc/autostart ]] && {
@@ -189,7 +189,7 @@ chmod +x /etc/autostart
 wget -qO- https://raw.githubusercontent.com/starrising321/SSHPLUS/main/versao |sed -n '1 p' |cut -d' ' -f2 > /bin/versao && cat /bin/versao > /home/sshplus
 service ssh restart > /dev/null 2>&1
 [[ $(ps x | grep "bot_plus"|grep -v grep | wc -l) != '0' ]] && {
-[[ ! -e "/etc/SSHPlus/ShellBot.sh" ]] && wget -qO- https://raw.githubusercontent.com/starrising321/SSHPLUS/sh/main/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
+[[ ! -e "/etc/SSHPlus/ShellBot.sh" ]] && wget -qO- https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
 screen -r -S "bot_plus" -X quit
 screen -r -S "udpvpn" -X quit
 screen -wipe 1>/dev/null 2>/dev/null
