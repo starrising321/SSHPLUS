@@ -5,7 +5,10 @@ sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.c
 ===============
 # TROUBLESHOOT
 
-if badvpn or limitor and proxy socks not working use this cocmand: sudo apt install screen
+if badvpn or limitor and proxy socks not working use this cocmand:
+
+sudo apt install screen
+
 and than all DONE
 
 
