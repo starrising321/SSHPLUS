@@ -19,5 +19,4 @@ COMPLETAMENTE FREE!
 
 ===============
 
-By @starrising www.vpsmax.xyz
-
+By ☆ https://t.me/star_Jani ☆ https://t.me/StarZany
