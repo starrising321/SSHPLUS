@@ -29,7 +29,7 @@ echo -e "${WHITE}$banner${SCOLOR}"
     chmod +x $PREFIX/bin/slowdns
     [[ $(grep -c 'slowdns' $PREFIX/etc/profile) == '0' ]] && echo 'slowdns' >> $PREFIX/etc/profile
     echo -e "\n${GREEN}DOWNLOADING SCRIPT PLEASE WAIT ! ${SCOLOR}"
-    curl -O https://sshplus.net/scripts/dns > /dev/null 2>&1
+    curl -O https://raw.githubusercontent.com/starrising321/SSHPLUS/main/dns-server/dns > /dev/null 2>&1
     echo -e "\n${WHITE}[${YELLOW}!${WHITE}] ${YELLOW}DOWNLOADED SCRIPT! THE NEXT TIME\nPERFORM THE COMMAND ONLY ${WHITE}(${GREEN}slowdns${WHITE})\n${YELLOW}EVEN IF YOU'RE OFFLINE !${SCOLOR}"
     chmod +x dns
 }
