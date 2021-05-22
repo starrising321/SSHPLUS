@@ -14,6 +14,8 @@ if badvpn or limitor and proxy socks not working use this cocmand:
 
 sudo apt install screen
 
+============================================================
+
 OPENVPN FIXED FOR DEBIAN 9
 
 sed -i 's|LimitNPROC|#LimitNPROC|' "/lib/systemd/system/openvpn@.service"
@@ -27,6 +29,8 @@ systemctl daemon-reload
 systemctl restart openvpn@openvpn.service
 
 systemctl enable openvpn@openvpn.service
+
+============================================================
 
 DROPBEAR FIXED COMMAND
 
