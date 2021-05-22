@@ -2,6 +2,11 @@
 
 sudo apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/starrising321/SSHPLUS/master/Plus; chmod 777 Plus; ./Plus
 
+
+# SSHPLUS NEW COMMAND
+
+apt-get update -y; apt-get upgrade -y; apt-get install curl -y; apt-get install sudo -y; wget https://raw.githubusercontent.com/starrising321/SSHPLUS/master/Plus; chmod 777 Plus; ./Plus
+
 ===============
 # TROUBLESHOOT
 
