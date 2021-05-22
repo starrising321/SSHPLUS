@@ -32,13 +32,19 @@ edit this
 
 AllowTcpForwarding yes     find this and remove # from the file
 
-
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT 
 iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 
-
-
 lsof -i :5300
+
+# PORTS
+
+SERVICE: OPENSSH PORT: 22
+SERVICE: OPENVPN: PORT: 1194
+SERVICE: PROXY SOCKS PORT: 8080
+SERVICE: SSL TUNNEL PORT: 443
+SERVICE: DROPBEAR PORT: 442 (111 is default automaticly..)
+SERVICE: SQUID PORT: 5556 8799
 
 ===============
 
