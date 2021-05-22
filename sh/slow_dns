@@ -29,7 +29,7 @@ installslowdns() {
 echo -e ""
 echo -e "\033[1;31mATENCAO! \033[1;33mBE AWARE THAT THIS METHOD IS STILL !\033[0m"
 echo -e "\n${YELLOW}THIS IS IN THE BETA PHASE AND THAT BEING SLOW MAY NOT WORK PERFECTLY ! ${SCOLOR}\n"
-echo -ne "${GREEN}DESEJA CONTINUE INSTALLATION ? ${YELLOW}[s/n]:${SCOLOR} "
+echo -ne "${GREEN}WISHES TO CONTINUE INSTALLATION ? ${YELLOW}[s/n]:${SCOLOR} "
     read resp
     [[ "$resp" != @(s|sim|S|SIM) ]] && {
         echo -e "\n${RED}Returning...${SCOLOR}"
