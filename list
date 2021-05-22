@@ -80,6 +80,8 @@ netstat -nplt| grep -w 'apache2' |grep -w '80' && apt remove apache2 -y
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 
+wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/slow_dns -O /bin/slow_dns > /dev/null 2>&1
+chmod +x /bin/slow_dns
 wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/addhost.sh -O /bin/addhost > /dev/null 2>&1
 chmod +x /bin/addhost
 wget https://raw.githubusercontent.com/starrising321/SSHPLUS/main/sh/verifatt.sh -O /bin/verifatt > /dev/null 2>&1
@@ -159,7 +161,7 @@ chmod +x /usr/lib/sshplus
 [[ ! -d /etc/bot/suspensos ]] && mkdir /etc/bot/suspensos
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
-_mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "blockt" "otimizar" "menu" "speedtest" "banner" "cfirm.py" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "proxy.py")
+_mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "blockt" "otimizar" "menu" "speedtest" "banner" "cfirm.py" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "slow_dns" "bot" "proxy.py")
 
 _arq_host="/etc/hosts"
 _host[0]="d1n212ccp6ldpw.cloudfront.net"
