@@ -10,6 +10,8 @@ apt-get update -y; apt-get upgrade -y; apt-get install curl -y; apt-get install 
 ===============
 # TROUBLESHOOT
 
+============================================================
+
 if badvpn or limitor and proxy socks not working use this cocmand:
 
 sudo apt install screen
@@ -37,6 +39,8 @@ DROPBEAR FIXED COMMAND
 apt-get install dropbear -y
 
 and than all DONE
+
+============================================================
 
 # SLOWDNS AFTER INSTALL COMMAND MANUAL
 
