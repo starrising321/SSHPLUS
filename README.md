@@ -62,7 +62,8 @@ edit this
 
 AllowTcpForwarding yes     find this and remove # from the file
 
-iptables -I INPUT -p udp --dport 5300 -j ACCEPT 
+iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+
 iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 
 lsof -i :5300
